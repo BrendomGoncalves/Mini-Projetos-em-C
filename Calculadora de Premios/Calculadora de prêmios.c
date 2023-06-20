@@ -1,5 +1,5 @@
 //Universidade Estadual de Santa Cruz
-//Alunos: Brendom GonÁalves e Bruno Felipe
+//Alunos: Brendom Gon√ßalves e Bruno Felipe
 
 //Calcula o premio de cada participante baseado no valor apostado por ele
 
@@ -11,24 +11,24 @@ int main(void) {
   
   setlocale(LC_ALL, "portuguese");
   
-  // DECLARA«√O DE VARI¡VEIS
+  // DECLARA√á√ÉO DE VARI√ÅVEIS
   int i, controle;
   int q_ganhadores;
   float v_premio, total_aposta, valor_base;
   
-  // INICIO DO C”DIGO
+  // INICIO DO C√ìDIGO
   do {
     printf("------ RESULTADO DA LOTERIA ------\n");
     
-	// VALOR DO PR MIO
-    printf("Valor do prÍmio: R$ ");
+	// VALOR DO PR√äMIO
+    printf("Valor do pr√™mio: R$ ");
     scanf("%f", &v_premio);
 	
 	// QUANTIDADE DE GANHADORES
 	printf("Quantidade de ganhadores: ");
     scanf("%i", &q_ganhadores);
 	
-	// DECLARA«√O DE VARI¡VEIS A PARTIR DA QUANTIDADE
+	// DECLARA√á√ÉO DE VARI√ÅVEIS A PARTIR DA QUANTIDADE
 	char nome[q_ganhadores][20];
 	float v_aposta[q_ganhadores], premio_part[q_ganhadores];
 	
@@ -42,7 +42,7 @@ int main(void) {
       scanf("%f", &v_aposta[i]);
     }
 
-	// C¡LCULO DO PR MIO DE CADA PARTICIPANTE
+	// C√ÅLCULO DO PR√äMIO DE CADA PARTICIPANTE
 	for (i=0;i<q_ganhadores;i++){
 		total_aposta += v_aposta[i];
 	}
@@ -53,22 +53,22 @@ int main(void) {
 		premio_part[i] = (v_aposta[i] * valor_base);
 	}
 	
-	// RESULTADO DO PR MIO DE CADA PARTICIPANTE
+	// RESULTADO DO PR√äMIO DE CADA PARTICIPANTE
 	if (q_ganhadores == 1){
-		printf("\n\nO premio do participante È:\n\n");
+		printf("\n\nO premio do participante √©:\n\n");
 	}else{
-		printf("\n\nO premio dos participantes s„o:\n\n");
+		printf("\n\nO premio dos participantes s√£o:\n\n");
 	}
 	for (i=0;i<q_ganhadores;i++){
 		printf("--%s ganhou R$%.2f.\n", nome[i], premio_part[i]);
 	}
 
-	// OP«√O DE SAÕDA
-    pergunta : printf("\n\nDeseja verificar outro sorteio? / 1 (SIM) - 0 (N√O)");
+	// OP√á√ÉO DE SA√çDA
+    pergunta : printf("\n\nDeseja verificar outro sorteio? / 1 (SIM) - 0 (N√ÉO)");
     scanf("%i", &controle);
 
     if ((controle != 1) && (controle != 0)){
-      	printf("\n\nOpÁ„o inv·lida! Digite novamente.\n");
+      	printf("\n\nOp√ß√£o inv√°lida! Digite novamente.\n");
       	goto pergunta;
     }else if (controle == 1){
     	system("cls");
